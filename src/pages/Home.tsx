@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react'
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp'
+import { AccessibilityWidget } from '../components/AccessibilityWidget'
 import { AnimatedTextCycle } from '../components/AnimatedTextCycle'
 import { Button } from '../components/ui/button'
 import { cn } from '../lib/utils'
@@ -559,6 +560,7 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <AccessibilityWidget />
     </>
   )
 }

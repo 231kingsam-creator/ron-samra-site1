@@ -1,6 +1,7 @@
 import { Header } from '../components/layout/Header'
 import { Footer } from '../components/layout/Footer'
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp'
+import { AccessibilityWidget } from '../components/AccessibilityWidget'
 import { Button } from '../components/ui/button'
 
 const WA_LINK = 'https://wa.me/972523518103?text=היי, הגעתי דרך האתר, אשמח לפרטים נוספים'
@@ -120,6 +121,7 @@ export default function Articles() {
 
       <Footer />
       <FloatingWhatsApp />
+      <AccessibilityWidget />
     </>
   )
 }
