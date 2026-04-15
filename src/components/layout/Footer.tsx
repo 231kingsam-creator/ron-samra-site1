@@ -77,12 +77,21 @@ export function Footer() {
 
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 flex flex-col gap-3 text-xs text-stone-600 md:flex-row md:justify-between">
-          <p>&copy; {year} רון סמרה. כל הזכויות שמורות.</p>
-          <p className="text-stone-700 max-w-md">
-            רון סמרה הוא מטפל מוסמך ברפואה סינית ואינו רופא MD.
-            המידע באתר אינו מיועד לשמש כהמלצה רפואית.
-          </p>
+        <div className="mt-10 border-t border-white/10 pt-6 space-y-4">
+          {/* Policy links */}
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-stone-500">
+            <a href="/privacy.html"       className="hover:text-amber-400 transition-colors">מדיניות פרטיות</a>
+            <a href="/terms.html"         className="hover:text-amber-400 transition-colors">תנאי שימוש</a>
+            <a href="/accessibility.html" className="hover:text-amber-400 transition-colors">הצהרת נגישות</a>
+            <a href="/disclaimer.html"    className="hover:text-amber-400 transition-colors">הצהרת אחריות רפואית</a>
+          </div>
+          <div className="flex flex-col gap-2 text-xs text-stone-600 md:flex-row md:justify-between">
+            <p>&copy; {year} רון סמרה. כל הזכויות שמורות. מודיעין מכבים רעות.</p>
+            <p className="text-stone-700 max-w-md">
+              רון סמרה מחזיק בתעודת מטפל מוסמך ברפואה סינית BAc. Lic. Ac ואינו רופא MD.
+              המידע באתר אינו מהווה המלצה רפואית. תוצאות הטיפול משתנות מאדם לאדם.
+            </p>
+          </div>
         </div>
 
       </div>

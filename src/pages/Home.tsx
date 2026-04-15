@@ -500,7 +500,75 @@ function ArticlesPreviewSection() {
 }
 
 /* ═══════════════════════════════════════
-   10. CTA
+   10. LOCATION
+═══════════════════════════════════════ */
+function LocationSection() {
+  return (
+    <section className="py-20 bg-muted/40">
+      <div className="mx-auto max-w-5xl px-6">
+
+        <div className="mb-10 text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-amber-600">מיקום</span>
+          <h2 className="mt-2 text-3xl font-bold text-foreground md:text-4xl">איך מגיעים</h2>
+          <p className="mt-2 text-muted-foreground">מודיעין מכבים רעות — מיקום מרכזי ונוח</p>
+        </div>
+
+        {/* Trust strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+          {[
+            { icon: '🅿️', text: 'חניה חופשית בסביבה' },
+            { icon: '📍', text: 'מיקום מרכזי במודיעין' },
+            { icon: '🚗', text: 'דקות ממרכז העיר' },
+            { icon: '🌿', text: 'קליניקה שקטה ונגישה' },
+          ].map((item) => (
+            <div key={item.text} className="flex flex-col items-center gap-2 rounded-2xl border border-border bg-card p-4 text-center">
+              <span className="text-2xl">{item.icon}</span>
+              <span className="text-xs text-muted-foreground font-medium">{item.text}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Map embed placeholder + navigation buttons */}
+        <div className="rounded-3xl border border-border overflow-hidden bg-card">
+          {/* Google Maps embed */}
+          <div className="aspect-[16/7] w-full bg-amber-50/50 flex items-center justify-center">
+            <iframe
+              title="מיקום המרפאה"
+              src="https://maps.google.com/maps?q=31.893533620558788,35.005875575375136&z=15&output=embed"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          {/* Navigation buttons */}
+          <div className="p-5 flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="https://waze.com/ul?ll=31.893533620558788,35.005875575375136&navigate=yes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-2xl border-2 border-stone-200 bg-white px-6 py-3 font-semibold text-stone-700 hover:border-amber-300 hover:bg-amber-50 transition-colors"
+            >
+              <span>🚗</span> Waze
+            </a>
+            <a
+              href="https://maps.app.goo.gl/fk16SLyG2tZwzfD56"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 rounded-2xl border-2 border-stone-200 bg-white px-6 py-3 font-semibold text-stone-700 hover:border-amber-300 hover:bg-amber-50 transition-colors"
+            >
+              <span>📍</span> Google Maps
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  )
+}
+
+/* ═══════════════════════════════════════
+   11. CTA
 ═══════════════════════════════════════ */
 function CtaSection() {
   return (
@@ -556,6 +624,7 @@ export default function Home() {
         <TestimonialsSection />
         <FaqSection />
         <ArticlesPreviewSection />
+        <LocationSection />
         <CtaSection />
       </main>
       <Footer />
