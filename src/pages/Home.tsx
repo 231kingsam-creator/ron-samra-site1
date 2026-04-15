@@ -87,21 +87,15 @@ function HeroSection() {
         >
           <div aria-hidden className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-35% to-background" />
           <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-amber-200/40 bg-gradient-to-br from-amber-50/50 via-stone-50/50 to-amber-50/30 p-6 shadow-2xl shadow-amber-900/10">
-            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-amber-100/60 bg-gradient-to-br from-amber-100/40 to-stone-100/40">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-amber-100/60">
               <img
                 src="/images/hero/ron-hero-mobile.jpg"
-                alt="מרפאת רון סמרה"
-                className="absolute inset-0 h-full w-full object-cover object-top"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                alt="רון סמרה — מטפל ברפואה סינית"
+                className="h-full w-full object-cover"
+                style={{ objectPosition: 'center 20%' }}
               />
-              <div className="flex h-full items-center justify-center">
-                <div className="text-center space-y-4 p-8">
-                  <div className="text-6xl md:text-8xl">🌿</div>
-                  <p className="text-stone-500 text-sm max-w-sm mx-auto">
-                    רפואה סינית מסורתית ודיקור — טיפול הוליסטי מקצועי
-                  </p>
-                </div>
-              </div>
+              {/* subtle gradient at bottom for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </div>
           </div>
         </motion.div>
