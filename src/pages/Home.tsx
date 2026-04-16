@@ -48,13 +48,6 @@ function HeroSection() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1 text-center lg:text-start"
           >
-            <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-amber-200/70 bg-amber-50 px-4 py-1.5">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
-              <span className="text-xs font-semibold tracking-wide text-amber-800">
-                BAc Lic Ac · I.C.O.M London · 35+ שנות ניסיון
-              </span>
-            </div>
-
             <h1 className="text-5xl font-bold leading-[1.1] text-stone-900 md:text-6xl xl:text-7xl">
               סובלים מ{' '}
               <AnimatedTextCycle
