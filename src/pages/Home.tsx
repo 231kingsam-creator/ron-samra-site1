@@ -150,20 +150,175 @@ function TrustBar() {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   3. TREATMENTS
+   3. TREATMENTS — premium line-art icons
 ══════════════════════════════════════════════════════════════ */
+
+function IconSpine() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      {/* Head silhouette */}
+      <ellipse cx="40" cy="14" rx="10" ry="12" stroke="#1c1917" strokeWidth="1.4" fill="none"/>
+      {/* Neck */}
+      <line x1="40" y1="26" x2="40" y2="32" stroke="#1c1917" strokeWidth="1.4"/>
+      {/* Spine column */}
+      <line x1="40" y1="32" x2="40" y2="70" stroke="#1c1917" strokeWidth="1.4"/>
+      {/* Vertebrae discs */}
+      {[35,41,47,53,59,65].map((y, i) => (
+        <rect key={i} x="33" y={y - 2.5} width="14" height="5" rx="2.5" stroke="#1c1917" strokeWidth="1.2" fill="none"/>
+      ))}
+      {/* Acupuncture dots */}
+      <circle cx="40" cy="35" r="2.5" fill="#b45309"/>
+      <circle cx="40" cy="50" r="2.5" fill="#b45309"/>
+      <circle cx="40" cy="65" r="2.5" fill="#b45309"/>
+      {/* Shoulder lines */}
+      <path d="M40 34 Q26 36 22 42" stroke="#1c1917" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+      <path d="M40 34 Q54 36 58 42" stroke="#1c1917" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+    </svg>
+  )
+}
+
+function IconHead() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      {/* Head profile */}
+      <path d="M48 12 C60 12 68 22 68 34 C68 48 58 58 46 60 L46 68 L34 68 L34 60 C26 58 18 50 18 38 C18 24 28 12 40 12 Z"
+        stroke="#1c1917" strokeWidth="1.4" fill="none" strokeLinejoin="round"/>
+      {/* Eye */}
+      <circle cx="44" cy="30" r="2" fill="#1c1917"/>
+      {/* Acupuncture points */}
+      <circle cx="36" cy="22" r="2.5" fill="#b45309"/>
+      <circle cx="28" cy="36" r="2.5" fill="#b45309"/>
+      <circle cx="38" cy="44" r="2.5" fill="#b45309"/>
+      {/* Meridian lines */}
+      <path d="M36 22 L30 32 L28 36" stroke="#b45309" strokeWidth="0.9" strokeDasharray="2 2" strokeLinecap="round"/>
+      <path d="M28 36 L34 42 L38 44" stroke="#b45309" strokeWidth="0.9" strokeDasharray="2 2" strokeLinecap="round"/>
+      {/* Pain lines */}
+      <path d="M56 18 L60 14" stroke="#1c1917" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M60 22 L65 20" stroke="#1c1917" strokeWidth="1.2" strokeLinecap="round"/>
+      <path d="M58 28 L64 28" stroke="#1c1917" strokeWidth="1.2" strokeLinecap="round"/>
+    </svg>
+  )
+}
+
+function IconStress() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      {/* Seated figure */}
+      {/* Head */}
+      <circle cx="40" cy="14" r="8" stroke="#1c1917" strokeWidth="1.4" fill="none"/>
+      {/* Body */}
+      <path d="M40 22 L40 46" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round"/>
+      {/* Crossed legs */}
+      <path d="M40 46 Q30 50 24 58" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      <path d="M40 46 Q50 50 56 58" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      <path d="M24 58 Q40 62 56 58" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      {/* Arms resting */}
+      <path d="M40 30 Q28 34 24 42" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      <path d="M40 30 Q52 34 56 42" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      {/* Energy dots */}
+      <circle cx="40" cy="34" r="2.5" fill="#b45309"/>
+      <circle cx="40" cy="24" r="2" fill="#b45309" opacity="0.5"/>
+      {/* Radiance lines */}
+      <path d="M40 8 L40 4" stroke="#b45309" strokeWidth="1" strokeLinecap="round"/>
+      <path d="M46 10 L49 7" stroke="#b45309" strokeWidth="1" strokeLinecap="round"/>
+      <path d="M34 10 L31 7" stroke="#b45309" strokeWidth="1" strokeLinecap="round"/>
+    </svg>
+  )
+}
+
+function IconSleep() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      {/* Crescent moon */}
+      <path d="M50 18 C42 18 34 25 34 36 C34 47 42 54 52 54 C44 58 34 56 28 50 C20 42 20 30 28 22 C34 15 43 13 50 18 Z"
+        stroke="#1c1917" strokeWidth="1.4" fill="none" strokeLinejoin="round"/>
+      {/* Sleeping figure head */}
+      <ellipse cx="40" cy="66" rx="9" ry="7" stroke="#1c1917" strokeWidth="1.3" fill="none"/>
+      {/* Closed eyes */}
+      <path d="M36 65 Q37.5 67 39 65" stroke="#1c1917" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+      <path d="M41 65 Q42.5 67 44 65" stroke="#1c1917" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+      {/* Stars */}
+      <circle cx="60" cy="28" r="1.5" fill="#b45309"/>
+      <circle cx="64" cy="20" r="1" fill="#b45309" opacity="0.7"/>
+      <circle cx="55" cy="16" r="1" fill="#b45309" opacity="0.5"/>
+      {/* Zzz */}
+      <path d="M56 38 L62 38 L56 44 L62 44" stroke="#1c1917" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
+
+function IconBreathing() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      {/* Left lung */}
+      <path d="M38 28 L38 20 C38 20 30 20 26 28 C22 36 22 48 26 54 C28 58 34 62 38 60 L38 28 Z"
+        stroke="#1c1917" strokeWidth="1.4" fill="none" strokeLinejoin="round"/>
+      {/* Right lung */}
+      <path d="M42 28 L42 20 C42 20 50 20 54 28 C58 36 58 48 54 54 C52 58 46 62 42 60 L42 28 Z"
+        stroke="#1c1917" strokeWidth="1.4" fill="none" strokeLinejoin="round"/>
+      {/* Trachea */}
+      <line x1="40" y1="10" x2="40" y2="22" stroke="#1c1917" strokeWidth="1.4"/>
+      <path d="M36 14 L44 14" stroke="#1c1917" strokeWidth="1.2" strokeLinecap="round"/>
+      {/* Bronchi */}
+      <path d="M40 22 Q36 24 36 28" stroke="#1c1917" strokeWidth="1.3" fill="none"/>
+      <path d="M40 22 Q44 24 44 28" stroke="#1c1917" strokeWidth="1.3" fill="none"/>
+      {/* Acupuncture dots */}
+      <circle cx="30" cy="38" r="2.5" fill="#b45309"/>
+      <circle cx="50" cy="38" r="2.5" fill="#b45309"/>
+      <circle cx="40" cy="46" r="2.5" fill="#b45309"/>
+      {/* Breath lines */}
+      <path d="M14 36 Q17 40 14 44" stroke="#1c1917" strokeWidth="1" strokeLinecap="round" fill="none"/>
+      <path d="M10 32 Q14 40 10 48" stroke="#1c1917" strokeWidth="1" strokeLinecap="round" fill="none"/>
+      <path d="M66 36 Q63 40 66 44" stroke="#1c1917" strokeWidth="1" strokeLinecap="round" fill="none"/>
+      <path d="M70 32 Q66 40 70 48" stroke="#1c1917" strokeWidth="1" strokeLinecap="round" fill="none"/>
+    </svg>
+  )
+}
+
+function IconFertility() {
+  return (
+    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      {/* Woman figure */}
+      {/* Head */}
+      <circle cx="40" cy="12" r="8" stroke="#1c1917" strokeWidth="1.4" fill="none"/>
+      {/* Hair */}
+      <path d="M32 10 Q30 4 36 6" stroke="#1c1917" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+      <path d="M48 10 Q50 4 44 6" stroke="#1c1917" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+      {/* Body */}
+      <path d="M40 20 L40 44" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round"/>
+      {/* Flowing dress / lower body */}
+      <path d="M40 44 Q30 52 26 68" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      <path d="M40 44 Q50 52 54 68" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      {/* Arms with flower */}
+      <path d="M40 28 Q28 30 24 38" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      <path d="M40 28 Q52 30 56 38" stroke="#1c1917" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+      {/* Flower */}
+      <circle cx="58" cy="40" r="3" stroke="#b45309" strokeWidth="1.2" fill="none"/>
+      <circle cx="58" cy="34" r="2" stroke="#b45309" strokeWidth="1" fill="none"/>
+      <circle cx="63" cy="38" r="2" stroke="#b45309" strokeWidth="1" fill="none"/>
+      <circle cx="63" cy="44" r="2" stroke="#b45309" strokeWidth="1" fill="none"/>
+      <circle cx="58" cy="46" r="2" stroke="#b45309" strokeWidth="1" fill="none"/>
+      <circle cx="53" cy="44" r="2" stroke="#b45309" strokeWidth="1" fill="none"/>
+      <circle cx="53" cy="38" r="2" stroke="#b45309" strokeWidth="1" fill="none"/>
+      <circle cx="58" cy="40" r="1.5" fill="#b45309"/>
+      {/* Energy dot */}
+      <circle cx="40" cy="34" r="2.5" fill="#b45309"/>
+    </svg>
+  )
+}
+
 const treatments = [
-  { num: '01', title: 'כאב גב, צוואר וכתפיים', desc: 'כאב כרוני, נוקשות ומתח שמגבילים את היומיום',   href: '/articles/pillar-pain.html' },
-  { num: '02', title: 'כאבי ראש ומיגרנות',     desc: 'הקלה על מיגרנות חוזרות וכאבי ראש כרוניים',   href: '/articles/pillar-pain.html' },
-  { num: '03', title: 'סטרס וחרדה',             desc: 'מתח מתמשך, דאגנות ותחושת עומס שלא מרפה',     href: '/articles/pillar-stress-sleep.html' },
-  { num: '04', title: 'הפרעות שינה',            desc: 'קושי להירדם, שינה קטועה ועייפות למחרת',      href: '/articles/pillar-stress-sleep.html' },
-  { num: '05', title: 'אסטמה וקוצר נשימה',     desc: 'הפחתת תדירות ועוצמת הסימפטומים',              href: '/articles/pillar-digestion.html' },
-  { num: '06', title: 'פריון ובריאות האישה',   desc: 'תמיכה בפריון, מחזור ואיזון הורמונלי',         href: '/articles/pillar-fertility.html' },
+  { Icon: IconSpine,     title: 'כאב גב, צוואר וכתפיים', desc: 'כאב כרוני, נוקשות ומתח שמגבילים את היומיום',   href: '/articles/pillar-pain.html' },
+  { Icon: IconHead,      title: 'כאבי ראש ומיגרנות',     desc: 'הקלה על מיגרנות חוזרות וכאבי ראש כרוניים',   href: '/articles/pillar-pain.html' },
+  { Icon: IconStress,    title: 'סטרס וחרדה',             desc: 'מתח מתמשך, דאגנות ותחושת עומס שלא מרפה',     href: '/articles/pillar-stress-sleep.html' },
+  { Icon: IconSleep,     title: 'הפרעות שינה',            desc: 'קושי להירדם, שינה קטועה ועייפות למחרת',      href: '/articles/pillar-stress-sleep.html' },
+  { Icon: IconBreathing, title: 'אסטמה וקוצר נשימה',     desc: 'הפחתת תדירות ועוצמת הסימפטומים',              href: '/articles/pillar-digestion.html' },
+  { Icon: IconFertility, title: 'פריון ובריאות האישה',   desc: 'תמיכה בפריון, מחזור ואיזון הורמונלי',         href: '/articles/pillar-fertility.html' },
 ]
 
 function TreatmentsSection() {
   return (
-    <section id="treatments" className="py-28">
+    <section id="treatments" className="py-28" style={{ background: 'oklch(0.97 0.012 50)' }}>
       <div className="mx-auto max-w-6xl px-6">
 
         <motion.div
@@ -177,7 +332,7 @@ function TreatmentsSection() {
           <p className="mt-4 text-stone-500 text-base">רפואה סינית קלאסית מטפלת בשורש, לא רק בסימפטום</p>
         </motion.div>
 
-        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {treatments.map((t, i) => (
             <motion.li
               key={t.title}
@@ -187,14 +342,49 @@ function TreatmentsSection() {
             >
               <a
                 href={t.href}
-                className="group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300/70 hover:shadow-xl hover:shadow-amber-900/5"
+                className="group flex h-full flex-col items-center text-center rounded-3xl p-8 transition-all duration-400"
+                style={{
+                  background: 'oklch(0.99 0.006 50)',
+                  border: '1px solid oklch(0.91 0.018 50)',
+                  boxShadow: '0 2px 16px 0 rgba(28,25,23,0.055)',
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(-4px)'
+                  el.style.boxShadow = '0 8px 32px 0 rgba(180,83,9,0.12)'
+                  el.style.borderColor = 'oklch(0.78 0.08 60)'
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget
+                  el.style.transform = ''
+                  el.style.boxShadow = '0 2px 16px 0 rgba(28,25,23,0.055)'
+                  el.style.borderColor = 'oklch(0.91 0.018 50)'
+                }}
               >
-                <span className="mb-5 font-mono text-xs font-bold tracking-widest text-amber-400/80">{t.num}</span>
-                <h3 className="text-base font-bold text-stone-900 leading-snug">{t.title}</h3>
-                <p className="mt-2 flex-1 text-sm text-stone-500 leading-relaxed">{t.desc}</p>
-                <span className="mt-5 flex items-center gap-1 text-xs font-semibold text-amber-700">
+                {/* Icon container */}
+                <div
+                  className="mb-7 flex items-center justify-center rounded-2xl transition-transform duration-400 group-hover:scale-105"
+                  style={{
+                    width: 88,
+                    height: 88,
+                    background: 'oklch(0.96 0.022 55)',
+                    padding: '14px',
+                  }}
+                >
+                  <t.Icon />
+                </div>
+
+                <h3
+                  className="text-base font-bold leading-snug text-stone-900"
+                  style={{ fontFamily: "'Frank Ruhl Libre', serif", fontSize: '1.05rem' }}
+                >
+                  {t.title}
+                </h3>
+                <p className="mt-2.5 flex-1 text-sm text-stone-500 leading-relaxed px-1">{t.desc}</p>
+
+                <span className="mt-6 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span>למאמר</span>
-                  <span className="transition-transform group-hover:-translate-x-0.5">←</span>
+                  <span>←</span>
                 </span>
               </a>
             </motion.li>
